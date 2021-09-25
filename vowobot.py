@@ -3,7 +3,7 @@ import osu, database, person, gacha
 from discord.ext import commands, tasks
 
 #Add token here
-token = ""
+token = "NzEwMTQ4ODE3NjIxODc2ODA3.XrwPoA.nAibWNu4-C7KgZgfLo7C0PgK2cg"
 bot = commands.Bot(command_prefix='<')
 bot.remove_command('help')
 
@@ -22,7 +22,10 @@ async def on_message(message):
     #When Josh talks
     if message.author.id == 378119119641378816:
         await message.channel.send('Shut the fuck up.')
-
+    
+    if message.author.id == 378119119641378816 or message.author.id == 706136369604591627:
+        await message.add_reaction('\U0001F595')
+        
     await bot.process_commands(message)
 
 @bot.command()
