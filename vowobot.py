@@ -3,7 +3,7 @@ import osu, database, person, gacha
 from discord.ext import commands, tasks
 
 #Add token here
-token = "NzEwMTQ4ODE3NjIxODc2ODA3.XrwPoA.nAibWNu4-C7KgZgfLo7C0PgK2cg"
+token = 
 bot = commands.Bot(command_prefix='<')
 bot.remove_command('help')
 
