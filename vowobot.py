@@ -3,7 +3,7 @@ import osu, database, person, gacha
 from discord.ext import commands, tasks
 
 #Add token here
-token = 
+token = "NzEwMTQ4ODE3NjIxODc2ODA3.XrwPoA.5F_FWfcNPPhePBioYwKZkMzvc88"
 bot = commands.Bot(command_prefix='<')
 bot.remove_command('help')
 
@@ -160,7 +160,8 @@ async def pull(ctx):
         byteArray = io.BytesIO()
         gachaImg.save(byteArray, format='PNG')
         byteArray.seek(0)
-        await ctx.send(file=discord.File(byteArray, 'gachaImg.png'))
+        
+        await ctx.send('Multi-pull for ' + ctx.message.author.name + ":", file=discord.File(byteArray, 'gachaImg.png'))
     
         person.updatePity(gacha.purplePity, gacha.yellowPity)
         database.updateDatabase(person)
